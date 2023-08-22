@@ -10,7 +10,7 @@ class GuestController extends Controller
 {
     public function index()
     {
-        $projects = Project::all();
+        $project = Project::all();
         return view('home', compact('projects'));
     }
 }

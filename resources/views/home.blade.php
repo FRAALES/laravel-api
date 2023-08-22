@@ -5,7 +5,12 @@
     <h1>Hello World!</h1>
     <ul class="list-unstyled">
         @foreach ($projects as $project)
-        <li>{{$project -> name}}</li>
+        <li>
+            <a href="{{ route('project.show', $project -> id) }}">
+                {{$project -> name}}
+            </a>
+
+        </li>
         @endforeach
     </ul>
 </div>
