@@ -11,7 +11,7 @@ class LoggedController extends Controller
 {
     public function show($id)
     {
-        $projects = Project::findOrFail($id);
+        $project = Project::findOrFail($id);
 
         return view('show', compact('project'));
     }

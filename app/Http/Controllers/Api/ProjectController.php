@@ -8,11 +8,10 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
-    public function testApi()
+    public function projectApi()
     {
         $projects = Project::all();
         return response()->json([
-            'success' => true,
             'results' => $projects
         ]);
     }
